@@ -1,0 +1,71 @@
+{
+    "name": "tacraft-sociality/flarum-qq-oauth",
+    "description": "QQ (Tencent) OAuth login for Flarum 2.",
+    "keywords": [
+        "flarum",
+        "qq",
+        "tencent",
+        "oauth",
+        "login",
+        "social-login"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "php": "^8.3",
+        "flarum/core": "^2.0.2",
+        "guzzlehttp/guzzle": "^7.7",
+        "intervention/image": "^3.2",
+        "tacraft-sociality/flarum-oauth-core": "*"
+    },
+    "authors": [
+        {
+            "name": "TCS Dev HUB",
+            "email": "notify@mail.mctcs.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TacraftSociality\\QqOauth\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "QQ OAuth",
+            "category": "feature",
+            "icon": {
+                "image": "icon.svg",
+                "backgroundColor": "#12B7F5",
+                "backgroundSize": "contain",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": true,
+                "forum": true,
+                "js": true,
+                "jsCommon": true,
+                "css": true,
+                "locale": true,
+                "gitConf": true,
+                "githubActions": false,
+                "prettier": true,
+                "typescript": true,
+                "bundlewatch": false,
+                "frontendTesting": false,
+                "backendTesting": false,
+                "phpstan": false,
+                "editorConfig": false,
+                "styleci": false
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

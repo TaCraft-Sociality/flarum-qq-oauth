@@ -1,0 +1,46 @@
+tacraft-sociality-qq-oauth:
+  forum:
+    log_in_with: Log in with QQ
+    link:
+      heading: QQ account
+      help: Link your QQ account so you can sign in to this forum with QQ, or remove an existing link.
+      status_linked: Linked
+      status_unlinked: Not linked
+      identifier: "QQ ID: {identifier}"
+      linked_at: "Linked {time}"
+      bind_button: Link QQ account
+      rebind_button: Use a different QQ account
+      unbind_button: Remove link
+      last_method_hint: This is the only third-party way to sign in to this account, so it cannot be unlinked. To switch it, click "Use a different account"; to unlink it, link another sign-in method first.
+      unlink_confirm: Are you sure you want to remove the link to your QQ account? You will no longer be able to sign in with QQ, and signing in with QQ again later will be treated as a new account.
+      linked_success: Your QQ account has been linked. You can now sign in with QQ.
+      unlinked_success: Your QQ account has been unlinked.
+      unlink_failed: Could not remove the link to your QQ account. Please try again.
+      load_failed: Could not load your QQ account status. Please try again.
+      retry: Try again
+    errors:
+      not_configured: QQ login has not been configured yet. Please contact an administrator.
+      cancelled: QQ login was cancelled.
+      invalid_state: Your login session expired. Please try again.
+      login_required: Please log in before linking a QQ account.
+      already_linked: This QQ account is already linked to another user.
+      expired_token: Your sign-up link expired. Please log in with QQ again.
+      token_error: QQ did not return an access token. Please try again.
+      openid_error: Could not read your QQ account ID. Please try again.
+      unionid_required: QQ did not return a unionid, so the login was refused. Ask the administrator to apply for the unionid permission for this app.
+      profile_error: Could not read your QQ profile. Please try again.
+      provider_error: QQ rejected the login request. Please try again.
+      network_error: Could not reach QQ. Please check your network and try again.
+      invalid_response: QQ returned an unexpected response. Please try again.
+      unknown: Something went wrong while signing in with QQ. Please try again.
+
+  admin:
+    settings:
+      app_id_label: QQ App ID
+      app_id_help: "The App ID of your QQ Connect website application. Register the callback URL {url} in the QQ Connect console."
+      app_secret_label: QQ App Key
+      app_secret_help: The App Key (also called App Secret) that matches the App ID above. Keep it private.
+      sync_avatar_label: Sync QQ avatar
+      sync_avatar_help: Try to copy the QQ profile picture to the forum when a user signs up with QQ. If the image cannot be downloaded, sign-up continues without an avatar.
+      icon_label: Login button icon
+      icon_help: Upload a PNG, JPG, GIF or WebP image to replace the built-in QQ icon. Images are scaled down to 256px and stored in the forum assets directory. Leave empty to use the built-in icon.

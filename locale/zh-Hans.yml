@@ -1,0 +1,46 @@
+tacraft-sociality-qq-oauth:
+  forum:
+    log_in_with: 使用 QQ 登录
+    link:
+      heading: QQ 账号
+      help: 绑定 QQ 账号后即可使用 QQ 登录论坛；也可以在这里解除已有的绑定。
+      status_linked: 已绑定
+      status_unlinked: 未绑定
+      identifier: "QQ 账号标识：{identifier}"
+      linked_at: "绑定于 {time}"
+      bind_button: 绑定 QQ 账号
+      rebind_button: 更换绑定的 QQ
+      unbind_button: 解除绑定
+      last_method_hint: 这是当前账号唯一的第三方登录方式，不能解除绑定。如需更换，请点击「更换绑定的账号」；如需解绑，请先绑定其他登录方式。
+      unlink_confirm: 确定要解除 QQ 绑定吗？解除后将无法再使用 QQ 登录；如果以后再次使用 QQ 登录，系统会把它当作新账号。
+      linked_success: QQ 账号绑定成功，现在可以使用 QQ 登录论坛了。
+      unlinked_success: 已解除 QQ 账号绑定。
+      unlink_failed: 解除 QQ 绑定失败，请重试。
+      load_failed: 无法读取 QQ 绑定状态，请重试。
+      retry: 重试
+    errors:
+      not_configured: QQ 登录尚未配置，请联系管理员。
+      cancelled: 已取消 QQ 登录。
+      invalid_state: 登录会话已失效，请重新尝试。
+      login_required: 请先登录后再绑定 QQ 账号。
+      already_linked: 该 QQ 账号已绑定到其他用户。
+      expired_token: 注册链接已过期，请重新使用 QQ 登录。
+      token_error: QQ 未返回访问令牌，请重试。
+      openid_error: 无法读取 QQ 账号标识，请重试。
+      unionid_required: 当前 QQ 账号没有返回 unionid，无法登录。请让管理员在 QQ 互联后台为本站应用申请 unionid 权限后重试。
+      profile_error: 无法读取 QQ 个人资料，请重试。
+      provider_error: QQ 拒绝了本次登录请求，请重试。
+      network_error: 无法连接 QQ 服务器，请检查网络后重试。
+      invalid_response: QQ 返回了无法识别的响应，请重试。
+      unknown: 使用 QQ 登录时出现问题，请重试。
+
+  admin:
+    settings:
+      app_id_label: QQ App ID
+      app_id_help: 在 QQ 互联（connect.qq.com）创建的网站应用 App ID。请把回调地址 {url} 登记到 QQ 互联后台的「网站回调域」。
+      app_secret_label: QQ App Key
+      app_secret_help: 与 App ID 配对的 App Key（也称 App Secret），请妥善保管，不要泄露。
+      sync_avatar_label: 同步 QQ 头像
+      sync_avatar_help: 使用 QQ 注册时尝试把 QQ 头像同步到论坛。获取失败会自动跳过，不影响注册。
+      icon_label: 登录按钮图标
+      icon_help: 上传 PNG、JPG、GIF 或 WebP 图片，替换内置的 QQ 图标。图片会被压缩到最长边 256 像素并保存在论坛的 assets 目录；留空则使用内置图标。

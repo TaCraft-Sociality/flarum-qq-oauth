@@ -1,0 +1,111 @@
+.LogInButton--QQ {
+  --button-bg: #12b7f5;
+  --button-color: #fff;
+  --button-bg-hover: #0aa5dd;
+  --button-bg-active: #098fc0;
+  --button-bg-disabled: #9ed8f2;
+
+  .QQOAuth-icon {
+    display: inline-block;
+    flex: none;
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    vertical-align: -3px;
+  }
+
+  .QQOAuth-icon--image {
+    object-fit: contain;
+    border-radius: 4px;
+  }
+}
+
+.LogInButtons .Button.LogInButton--QQ {
+  align-items: center;
+  justify-content: center;
+}
+
+// Link/unlink panel on the user security page.
+
+.QQOAuth-Account {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background-color: var(--control-bg);
+  color: var(--control-color);
+  border-radius: @border-radius;
+
+  &-icon {
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    color: #12b7f5;
+    background-color: fade(#12b7f5, 12%);
+    border-radius: 50%;
+  }
+
+  &-logo {
+    width: 26px;
+    height: 26px;
+
+    &.QQOAuth-icon--image {
+      object-fit: contain;
+      border-radius: 6px;
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  &-name {
+    font-weight: bold;
+  }
+
+  &-status {
+    color: var(--muted-color);
+  }
+
+  &--linked &-status {
+    color: var(--alert-success-color);
+  }
+
+  &-meta {
+    margin-top: 4px;
+    font-size: 0.9em;
+    color: var(--muted-color);
+    word-break: break-all;
+  }
+
+  &-actions {
+    display: flex;
+    flex: none;
+    gap: 8px;
+    margin-left: auto;
+
+    .Button {
+      margin: 0;
+    }
+  }
+}
+
+.QQOAuth-Account-errors .Button {
+  margin-top: 8px;
+}
+
+@media @phone {
+  .QQOAuth-Account {
+    flex-wrap: wrap;
+
+    &-actions {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}
